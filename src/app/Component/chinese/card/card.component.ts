@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -8,10 +7,5 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() path: string = '';
 
-  onRedirect() {
-
-console.log("path:", this.path);
-
-  }
 
 }

@@ -1,8 +1,7 @@
 <div
-    (click)="onRedirect()"
     class="card-wrapper"
+    [routerLink]="path"
 >
     <ng-content></ng-content>
     <ng-content selector="[description]"></ng-content>
-
 </div>
