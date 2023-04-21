@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TruncatePipe implements PipeTransform {
 
-  transform(str: string, ...args: any[]): string {
-    if (str.length > 50) return str.slice(0, 50) + "...";
+  transform(str: any, ...args: any[]): string {
+    if (str.length > 100) return str.slice(0, 100) + "...";
     return str;
   }
 

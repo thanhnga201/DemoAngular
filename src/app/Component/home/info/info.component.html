@@ -1,0 +1,36 @@
+<h3>你好，请写你的名字和岁！</h3>
+        <form
+            class="info-form"
+            [formGroup]="infoForm"
+            (ngSubmit)="onSubmit()"
+        >
+            <label for="name">Name:</label>
+            <input
+                id="name"
+                type="text"
+                formControlName="name"
+            >
+            <label for="age">Age:</label>
+            <input
+                id="age"
+                type="text"
+                formControlName="age"
+            >
+            <label for="gender">Gender:</label>
+            <input
+                id="gender"
+                type="text"
+                formControlName="gender"
+            >
+            <br>
+            <button
+                type="submit"
+                [disabled]="!infoForm.valid"
+            >
+                Submit
+            </button>
+        </form>
+        <div *ngIf="isSubmit">
+            <p>Thông tin bạn nhập là:</p>
+            {{infoForm.value.name}} {{infoForm.value.age}} {{infoForm.value.gender}}
+        </div>
